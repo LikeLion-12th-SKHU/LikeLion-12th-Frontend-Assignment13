@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.netflix-logo {
+  display: flex;
+}
+
+.netflix-letter {
+  font-size: 6rem;
+  font-weight: bold;
+  color: red;
+}
