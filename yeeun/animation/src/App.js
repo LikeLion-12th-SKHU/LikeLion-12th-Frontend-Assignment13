@@ -1,42 +1,28 @@
-import React from "react";
-import { motion } from "framer-motion";
+import logo from "./logo.svg";
 import "./App.css";
 
-const NetflixLogo = () => {
-  const letters = ["N", "E", "T", "F", "L", "I", "X"];
-
-  const letterVariants = {
-    hidden: { opacity: 0, scale: 0.5 },
-    visible: (i) => ({
-      opacity: 1,
-      scale: [1.2, 0.8, 1],
-      transition: {
-        delay: i * 0.15,
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    }),
-  };
-
+function App() {
   return (
-    <div className='logo-container'>
-      <div className='netflix-logo'>
-        {" "}
-        {letters.map((letter, index) => (
-          <motion.span
-            key={index}
-            custom={index}
-            initial='hidden'
-            animate='visible'
-            variants={letterVariants}
-            className='netflix-letter'>
-            {" "}
-            {letter}{" "}
-          </motion.span>
-        ))}{" "}
-      </div>{" "}
+    <div className='App'>
+      <header className='App-header'>
+        <img
+          src={logo}
+          className='App-logo'
+          alt='logo'
+        />
+        <p>
+          Edit <code> src / App.js </code> and save to reload.{" "}
+        </p>{" "}
+        <a
+          className='App-link'
+          href='https://reactjs.org'
+          target='_blank'
+          rel='noopener noreferrer'>
+          Learn React{" "}
+        </a>{" "}
+      </header>{" "}
     </div>
   );
-};
+}
 
-export default NetflixLogo;
+export default App;
