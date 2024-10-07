@@ -1,0 +1,11 @@
+.logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 80px;
+    font-weight: bold;
+    color: #e50914;
+    background-color: #000;
+  }
+  
