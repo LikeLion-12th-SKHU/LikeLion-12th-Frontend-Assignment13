@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
 
 // 이미지 import
@@ -27,10 +27,15 @@ const Japan2 = () => {
     <div>
       <h2 style={{ textAlign: "center" }}>일본 먹거리 추천</h2>
       <Swiper
-        modules={[Navigation, Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }} // 자동재생 추가
+        navigation={true}
+        loop={true}
+        modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
-        navigation
         pagination={{ clickable: true }}
         // 슬라이드가 변경될 때 호출되는 함수
         onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
